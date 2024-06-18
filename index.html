@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Ruta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        body{
+            background-image: url('https://www.novatrans.es/wp-content/uploads/2020/11/optimizacion-de-rutas-de-transporte.png');
+        }
+        h1{
+            text-align: center;
+        }
+        /* Centrar el contenedor */
+        .container {
+           width: 400px;
+           height: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 25px;
+            text-align: center;
+            background: #63cde7;
+        }
+        
+        /* Estilos para los iconos */
+        .icon {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        
+        /* Estilos para la lupa */
+        .search-button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            
+        }
+        
+        .search-button:hover {
+            color: #007bff; /* Azul */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular  Ruta</h1>
+    <div class="container">
+        <form action="/route" method="post">
+            <br><br>
+            <label for="origin">
+                <i class="icon fas fa-map-marker-alt"></i>
+                Origen:
+            </label>
+            <input type="text" id="origin" name="origin" required>
+            <br><br><br><br>
+            <label for="destination">
+                <i class="icon fas fa-map-marker-alt"></i>
+                Destino:
+            </label>
+            <input type="text" id="destination" name="destination" required>
+            <br><br><br>
+            <button class="search-button" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
